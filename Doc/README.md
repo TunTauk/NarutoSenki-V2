@@ -196,7 +196,7 @@ python3 tools/strip_chipmunk_from_hello_mac_xcode.py
 
 4. Add **folder references** (blue folders) for `projects/NarutoSenki/Resources` and `projects/NarutoSenki/lua` to the application target so they are copied into `.app/Contents/Resources/` (needed for gameplay assets and Lua at runtime).
 
-5. Optional: rename the Xcode target/product from `hello` to `Naruto Senki`; set **C++ language dialect** to C++17 or C++20 to match other desktop builds; set **macOS Deployment Target** to **11.0** or newer if Xcode warns (the project is updated to **11.0** in tree).
+5. Optional: rename the Xcode target/product from `hello` to `Naruto Senki`; set **C++ language dialect** to C++17 or C++20 to match other desktop builds; set **macOS Deployment Target** to **12.0** or newer if Xcode warns (current Xcode requires at least 12.0; the project is updated to **12.0** in tree).
 
 ```bash
 xcodebuild -project projects/NarutoSenki/proj.mac/hello.xcodeproj -scheme hello -configuration Debug

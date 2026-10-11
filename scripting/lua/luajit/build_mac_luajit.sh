@@ -4,7 +4,7 @@
 set -euo pipefail
 
 # LuaJIT's Makefile requires this on current Xcode (otherwise: "missing: export MACOSX_DEPLOYMENT_TARGET=XX.YY")
-: "${MACOSX_DEPLOYMENT_TARGET:=11.0}"
+: "${MACOSX_DEPLOYMENT_TARGET:=12.0}"
 export MACOSX_DEPLOYMENT_TARGET
 
 HERE="$(cd "$(dirname "$0")" && pwd)"
