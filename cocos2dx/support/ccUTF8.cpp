@@ -263,7 +263,8 @@ int getUTF8StringLength(const UTF8* utf8, int max);
 #include <vector>
 #include <string>
 
-typedef std::basic_string<unsigned short> CCWideString;
+// libc++ 19+ has no std::char_traits<unsigned short>; char16_t has the same size.
+typedef std::u16string CCWideString;
 
 namespace llvm {
     

@@ -39,6 +39,7 @@ LOCAL_C_INCLUDES := $(LOCAL_PATH)/ \
                     $(LOCAL_PATH)/../../../CocosDenshion/include \
                     $(LOCAL_PATH)/../../../extensions \
                     $(LOCAL_PATH)/../xxtea \
+                    $(LOCAL_PATH)/../../../external \
                     $(LOCAL_PATH)/../../../external/sqlite3/src \
                     $(LOCAL_PATH)/../../../projects/NarutoSenki/Classes \
                     $(LOCAL_PATH)/../../../projects/NarutoSenki/Classes/Core \

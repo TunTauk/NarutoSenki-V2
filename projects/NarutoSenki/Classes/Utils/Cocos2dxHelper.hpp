@@ -3,7 +3,7 @@
 #include "../../../scripting/lua/cocos2dx_support/CCLuaEngine.h"
 #include "Utils/CCDeprecated.h"
 
-#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 #include <format>
 #else
 #define FMT_HEADER_ONLY
@@ -122,7 +122,7 @@ static inline SpriteFrame *getSpriteFrame(const string &name)
 	return SpriteFrameCache::sharedSpriteFrameCache()->spriteFrameByName(name.c_str());
 }
 
-#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC
+#if CC_TARGET_PLATFORM == CC_PLATFORM_WIN32 || CC_TARGET_PLATFORM == CC_PLATFORM_MAC || CC_TARGET_PLATFORM == CC_PLATFORM_ANDROID
 
 template <class... _Types>
 static inline SpriteFrame *getSpriteFrame(std::format_string<_Types...> _Fmt, _Types &&..._Args)
