@@ -1,3 +1,19 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+
+dependencyResolutionManagement {
+    repositoriesMode = RepositoriesMode.FAIL_ON_PROJECT_REPOS
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
+
 include ':libcocos2dx'
 project(':libcocos2dx').projectDir = new File(settingsDir, '../../../cocos2dx/platform/android/libcocos2dx')
 include ':narutosenki'

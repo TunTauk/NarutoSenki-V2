@@ -2,9 +2,8 @@ LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
-LOCAL_MODULE := cocos2dcpp_shared
+LOCAL_MODULE := cocos2dcpp
 
-LOCAL_MODULE_FILENAME := libcocos2dcpp
 
 COCOS_ROOT := $(LOCAL_PATH)/../../../../../
 

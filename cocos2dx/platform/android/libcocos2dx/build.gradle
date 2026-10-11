@@ -1,35 +1,28 @@
-apply plugin: 'com.android.library'
+plugins {
+    id 'com.android.library'
+}
 
 android {
-    compileSdkVersion 31
-    buildToolsVersion "31.0.0"
+    namespace = 'org.cocos2dx.lib'
+    compileSdk = 36
 
     defaultConfig {
-        minSdkVersion 21
-        //noinspection ExpiredTargetSdkVersion
-        targetSdkVersion 31
-        versionCode 1
-        versionName "1.0"
+        minSdk = 21
     }
 
     sourceSets.main {
-        aidl.srcDir "../java/src"
-        java.srcDir "../java/src"
+        java.srcDirs += "../java/src"
         manifest.srcFile "AndroidManifest.xml"
     }
 
     buildTypes {
         release {
-            minifyEnabled true
-             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            // Classes here are looked up by name from C++ via JNI; shrinking breaks them.
+            minifyEnabled = false
         }
     }
 }
 
 dependencies {
     implementation fileTree(dir: '../java/libs', include: ['*.jar'])
-}
-
-repositories {
-    mavenCentral()
 }
