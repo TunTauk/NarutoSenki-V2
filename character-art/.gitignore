@@ -1,0 +1,6 @@
+__pycache__/
+output/
+frames/
+.venv/
+packed/
+padded/
